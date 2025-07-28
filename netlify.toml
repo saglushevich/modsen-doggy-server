@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build && cp dist/netlify/functions/*.js netlify/functions-built/"
+  command = "yarn build && cp dist/netlify/functions/*.js netlify/functions-built/ && cp dist/src/apollo.js netlify/functions-built/ && sed -i '' 's|require(\"../../src/apollo\")|require(\"./apollo\")|g' netlify/functions-built/graphql.js"
   functions = "netlify/functions-built"
   publish = "public"
 
