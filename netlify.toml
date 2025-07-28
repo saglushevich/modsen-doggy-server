@@ -1,6 +1,6 @@
 [build]
   command = "yarn build"
-  functions = "dist"
+  functions = "dist/netlify/functions"
   publish = "public"
 
 [build.environment]
