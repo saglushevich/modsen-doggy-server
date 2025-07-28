@@ -1,6 +1,6 @@
 [build]
-  command = "yarn build"
-  functions = "dist/netlify/functions"
+  command = "yarn build && cp dist/netlify/functions/*.js netlify/functions-built/"
+  functions = "netlify/functions-built"
   publish = "public"
 
 [build.environment]
